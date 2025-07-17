@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
 		<style>
+* {
+  box-sizing: border-box;
+}
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f4f4f4;
@@ -45,14 +48,6 @@ body {
 	font-weight: bold;
 	color: #3d3c4f;
 }
-@media (max-width: 600px) {
-	.header h1 {
-		font-size: 20px;
-	}
-	.section h2 {
-		font-size: 18px;
-	}
-}
 .banner-container {
 	position: relative;
 	width: 100%;
@@ -62,6 +57,7 @@ body {
 
 .banner-image {
 	width: 100%;
+	margin: 0;
 	height: auto;
 	display: block;
 }
@@ -103,13 +99,13 @@ body {
 
 .title-text {
 	position: absolute;
-	top: 50%;
-	right: 80px; /* adjust based on spacing you want from right */
-	transform: translateY(-50%);
+	bottom: 0.8em; /* Align text to bottom of container */
+	right: 12%;
 	color: #3d3c4f; /* dark grey used in the image */
 	font-size: 2em;
 	font-weight: bold;
-	white-space: nowrap;
+	white-space: normal; /* Allow text to wrap */
+	line-height: 1; /* Minimize line spacing */
 }
 
 .picture-image {
@@ -117,7 +113,32 @@ body {
 	height: auto;
 	display: block;
 }
-    </style>
+@media (max-width: 700px) {
+  .container,
+  .banner-container,
+  .section-title {
+    max-width: 100%;
+  }
+
+  .banner-text h1 {
+    font-size: 2em; /* Reduce font size for smaller screens */
+  }
+
+  .banner-text p {
+    font-size: 1.2em;
+  }
+
+  .title-text {
+    font-size: 1.2em;
+    white-space: normal; /* Allow text to wrap */
+  }
+  img {
+	  margin: 0;
+	  max-width: 100%;
+	  height: auto;
+  }
+}
+</style>
 	</head>
 	<body>
 		<div class="container">
