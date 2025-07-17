@@ -1,0 +1,1 @@
+Leumit Research Institute Newsletter
