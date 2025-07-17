@@ -64,17 +64,17 @@ body {
 
 .banner-text {
 	position: absolute;
-	top: 25%;
+	top: 22.5%;
 	right: 2.5%;
 	transform: translateY(-40%);
 	color: white;
 	font-family: Arial, sans-serif;
 	text-align: right;
-	line-height: 1;
+	line-height: 1.15;
 }
 
 .banner-text h1 {
-	font-size: 4em;
+	font-size: 3.5em;
 	margin: 0;
 	font-weight: normal;
 }
@@ -99,13 +99,13 @@ body {
 
 .title-text {
 	position: absolute;
-	bottom: 0.8em; /* Align text to bottom of container */
+	bottom: 0.8em; 
 	right: 12%;
-	color: #3d3c4f; /* dark grey used in the image */
+	color: #3d3c4f;
 	font-size: 1.8em;
 	font-weight: bold;
-	white-space: normal; /* Allow text to wrap */
-	line-height: 1; /* Minimize line spacing */
+	white-space: normal;
+	line-height: 1;
 }
 
 .picture-image {
@@ -138,6 +138,26 @@ body {
 	  height: auto;
   }
 }
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 10pt; /* Shrink text slightly for fitting */
+  }
+  .container {
+    page-break-inside: avoid;
+  }
+  .section,
+  .banner-container,
+  .section-title {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+}
+
 </style>
 	</head>
 	<body>
